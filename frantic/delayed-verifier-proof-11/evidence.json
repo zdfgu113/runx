@@ -11,12 +11,12 @@
     "fuse_minutes": 300
   },
   "delivery": {
-    "status": "pending_submission",
-    "delivery_id": null,
-    "delivery_ref": null,
-    "delivered_at": null,
-    "machine_stage": "waiting_for_delivery",
-    "stage_reason": "Delivery is due by 2026-07-03T21:28:52.837Z."
+    "status": "delivered",
+    "delivery_id": "41dd7892-2d8a-42eb-892e-025af7b3826d",
+    "delivery_ref": "frantic:delivery:41dd7892-2d8a-42eb-892e-025af7b3826d",
+    "delivered_at": "2026-07-03T16:34:33.023Z",
+    "machine_stage": "machine_verification_pending",
+    "stage_reason": "Machine-floor verification is still pending."
   },
   "contract_used": {
     "profile": "published_artifact_v1",
@@ -67,11 +67,11 @@
       "status": "claimed_by_zdfgu113"
     },
     {
-      "at": null,
+      "at": "2026-07-03T16:34:33.023Z",
       "kind": "delivery_submitted",
-      "source": "pending",
-      "status": "pending_submission",
-      "delivery_ref": null
+      "source": "Frantic delivery response",
+      "status": "delivered",
+      "delivery_ref": "frantic:delivery:41dd7892-2d8a-42eb-892e-025af7b3826d"
     },
     {
       "at": null,
@@ -108,16 +108,16 @@
     },
     {
       "name": "delivery_receipt_ref",
-      "value": null
+      "value": "frantic:delivery:41dd7892-2d8a-42eb-892e-025af7b3826d"
     }
   ],
   "immediate_pass_record": {
-    "status": "pending_delivery",
-    "preflight_status": null,
-    "delivery_http_status": null,
-    "delivery_ref": null,
-    "machine_checks_current_state": "waiting_for_delivery",
-    "note": "This claim was reopened and reclaimed. Delivery is being resubmitted with the same durable public artifact set."
+    "status": "delivery_accepted",
+    "preflight_status": "queued",
+    "delivery_http_status": 200,
+    "delivery_ref": "frantic:delivery:41dd7892-2d8a-42eb-892e-025af7b3826d",
+    "machine_checks_current_state": "pending",
+    "note": "Frantic accepted the delivery and queued machine-floor verification. The delayed public_url_live recheck remains governed by the 24 hour not-before schedule."
   },
   "scheduled_waiting_state": {
     "check": "public_url_live",
@@ -131,6 +131,6 @@
     "not_before": "2026-07-04T16:28:52.837Z",
     "result": null
   },
-  "delivery_receipt_ref": null,
+  "delivery_receipt_ref": "frantic:delivery:41dd7892-2d8a-42eb-892e-025af7b3826d",
   "final_receipt_ref": null
 }

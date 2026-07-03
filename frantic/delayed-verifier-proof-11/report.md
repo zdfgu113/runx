@@ -7,7 +7,7 @@
 - Published a public GitHub artifact so the delayed `url.live` check has a durable URL to re-open after the waiting window.
 - Did not fabricate the post-window recheck or final receipt; both are marked pending until the real delayed verifier run exists.
 - The evidence file is structured with `summary`, observations, the contract used, the claim reference, the scheduled waiting state, and a pending final receipt slot.
-- Delivery is being resubmitted with the same durable public artifact set.
+- Submitted the delivery and received `frantic:delivery:41dd7892-2d8a-42eb-892e-025af7b3826d`.
 
 ## Current blocker
 
