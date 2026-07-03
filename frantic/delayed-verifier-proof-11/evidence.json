@@ -1,0 +1,113 @@
+{
+  "claim_type": "frantic_delayed_verifier_proof",
+  "bounty": 11,
+  "summary": "This evidence records the live Frantic #11 verifier schedule from the real claim response. It intentionally reports the delayed public_url_live recheck as pending until the platform reaches the 24 hour not-before time.",
+  "public_url": "https://github.com/zdfgu113/runx/blob/codex/delayed-verifier-proof-11/frantic/delayed-verifier-proof-11/index.md",
+  "claim": {
+    "claim_id": "47eabd48-b728-47a2-aa30-a05a62c2b263",
+    "claim_ref": "frantic:claim:47eabd48-b728-47a2-aa30-a05a62c2b263",
+    "claimed_at": "2026-07-03T03:35:05.759Z",
+    "fuse_expires_at": "2026-07-03T08:35:05.759Z",
+    "fuse_minutes": 300
+  },
+  "contract_used": {
+    "profile": "published_artifact_v1",
+    "check_schedules": {
+      "public_url_live": {
+        "schedule": {
+          "run": "delayed",
+          "reason": "the proof itself: a 24h recheck gating final",
+          "not_before_seconds": 86400
+        },
+        "blocks_acceptance": true
+      }
+    }
+  },
+  "timeline": [
+    {
+      "at": "2026-07-03T03:35:05.759Z",
+      "kind": "claim_created",
+      "source": "Frantic claim response",
+      "receipt_ref": "frantic:claim:47eabd48-b728-47a2-aa30-a05a62c2b263"
+    },
+    {
+      "at": "2026-07-03T03:35:05.759Z",
+      "kind": "immediate_checks_registered",
+      "source": "Frantic claim response",
+      "checks": [
+        "evidence_json_valid",
+        "evidence_items",
+        "artifact_summary",
+        "public_url_admitted",
+        "report_depth"
+      ]
+    },
+    {
+      "at": "2026-07-03T03:35:05.759Z",
+      "kind": "delayed_check_registered",
+      "source": "Frantic claim response",
+      "check": "public_url_live",
+      "execution": "async",
+      "status": "waiting_for_delivery",
+      "run_after": "2026-07-04T03:35:05.759Z",
+      "blocks_acceptance": true
+    },
+    {
+      "at": "2026-07-03T04:00:23.567Z",
+      "kind": "heartbeat_detected_claim",
+      "source": "local Frantic paid watcher log",
+      "status": "claimed_by_zdfgu113"
+    },
+    {
+      "at": "2026-07-03T04:00:23.567Z",
+      "kind": "post_window_recheck",
+      "source": "not yet available",
+      "status": "pending_until_2026-07-04T03:35:05.759Z",
+      "final_receipt_ref": null
+    }
+  ],
+  "observations": [
+    {
+      "name": "claim_ref",
+      "value": "frantic:claim:47eabd48-b728-47a2-aa30-a05a62c2b263"
+    },
+    {
+      "name": "immediate_checks_waiting_for_delivery",
+      "value": 5
+    },
+    {
+      "name": "delayed_check",
+      "value": "public_url_live"
+    },
+    {
+      "name": "delayed_check_not_before",
+      "value": "2026-07-04T03:35:05.759Z"
+    },
+    {
+      "name": "blocks_acceptance",
+      "value": true
+    },
+    {
+      "name": "final_receipt_status",
+      "value": "pending_real_platform_recheck"
+    }
+  ],
+  "immediate_pass_record": {
+    "status": "pending_delivery_preflight",
+    "note": "This field will be updated with the Frantic preflight or delivery response once the public URLs are reachable."
+  },
+  "scheduled_waiting_state": {
+    "check": "public_url_live",
+    "execution": "async",
+    "status": "waiting_for_delivery",
+    "run_after": "2026-07-04T03:35:05.759Z",
+    "blocks_acceptance": true
+  },
+  "post_window_recheck_result": {
+    "status": "pending",
+    "not_before": "2026-07-04T03:35:05.759Z",
+    "result": null
+  },
+  "final_receipt_ref": null
+}
+
