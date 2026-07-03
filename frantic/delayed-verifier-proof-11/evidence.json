@@ -1,21 +1,20 @@
 {
   "claim_type": "frantic_delayed_verifier_proof",
   "bounty": 11,
-  "summary": "This evidence records the live Frantic #11 verifier schedule from the real claim response. It intentionally reports the delayed public_url_live recheck as pending until the platform reaches the 24 hour not-before time.",
+  "summary": "This evidence records the live Frantic #11 verifier schedule from the current real claim response. It intentionally reports the delayed public_url_live recheck as pending until the platform reaches the 24 hour not-before time.",
   "public_url": "https://github.com/zdfgu113/runx/blob/codex/delayed-verifier-proof-11/frantic/delayed-verifier-proof-11/index.md",
   "claim": {
-    "claim_id": "47eabd48-b728-47a2-aa30-a05a62c2b263",
-    "claim_ref": "frantic:claim:47eabd48-b728-47a2-aa30-a05a62c2b263",
-    "claimed_at": "2026-07-03T03:35:05.759Z",
-    "fuse_expires_at": "2026-07-03T08:35:05.759Z",
+    "claim_id": "ec6b4842-0a74-4fc2-85e0-9276d0d3a119",
+    "claim_ref": "frantic:claim:ec6b4842-0a74-4fc2-85e0-9276d0d3a119",
+    "claimed_at": "2026-07-03T10:07:17.953Z",
+    "fuse_expires_at": "2026-07-03T15:07:17.953Z",
     "fuse_minutes": 300
   },
   "delivery": {
-    "delivery_id": "1215be06-f5fb-4945-8ddc-1ce6d8f50139",
-    "delivery_ref": "frantic:delivery:1215be06-f5fb-4945-8ddc-1ce6d8f50139",
-    "delivered_at": "2026-07-03T04:04:41.843Z",
-    "machine_stage": "machine_verification_pending",
-    "stage_reason": "Machine-floor verification is still pending."
+    "status": "pending_submission",
+    "delivery_id": null,
+    "delivery_ref": null,
+    "delivered_at": null
   },
   "contract_used": {
     "profile": "published_artifact_v1",
@@ -32,13 +31,13 @@
   },
   "timeline": [
     {
-      "at": "2026-07-03T03:35:05.759Z",
+      "at": "2026-07-03T10:07:17.953Z",
       "kind": "claim_created",
       "source": "Frantic claim response",
-      "receipt_ref": "frantic:claim:47eabd48-b728-47a2-aa30-a05a62c2b263"
+      "receipt_ref": "frantic:claim:ec6b4842-0a74-4fc2-85e0-9276d0d3a119"
     },
     {
-      "at": "2026-07-03T03:35:05.759Z",
+      "at": "2026-07-03T10:07:17.953Z",
       "kind": "immediate_checks_registered",
       "source": "Frantic claim response",
       "checks": [
@@ -50,54 +49,33 @@
       ]
     },
     {
-      "at": "2026-07-03T03:35:05.759Z",
+      "at": "2026-07-03T10:07:17.953Z",
       "kind": "delayed_check_registered",
       "source": "Frantic claim response",
       "check": "public_url_live",
       "execution": "async",
       "status": "waiting_for_delivery",
-      "run_after": "2026-07-04T03:35:05.759Z",
+      "run_after": "2026-07-04T10:07:17.953Z",
       "blocks_acceptance": true
     },
     {
-      "at": "2026-07-03T04:00:23.567Z",
-      "kind": "heartbeat_detected_claim",
+      "at": "2026-07-03T10:07:23.526Z",
+      "kind": "heartbeat_detected_reclaim",
       "source": "local Frantic paid watcher log",
       "status": "claimed_by_zdfgu113"
     },
     {
-      "at": "2026-07-03T04:00:23.567Z",
+      "at": "2026-07-03T10:21:07.207Z",
       "kind": "post_window_recheck",
       "source": "not yet available",
-      "status": "pending_until_2026-07-04T03:35:05.759Z",
+      "status": "pending_until_2026-07-04T10:07:17.953Z",
       "final_receipt_ref": null
-    },
-    {
-      "at": "2026-07-03T04:04:41.843Z",
-      "kind": "delivery_submitted",
-      "source": "Frantic delivery response",
-      "status": "delivered",
-      "delivery_ref": "frantic:delivery:1215be06-f5fb-4945-8ddc-1ce6d8f50139"
-    },
-    {
-      "at": "2026-07-03T04:04:44.878Z",
-      "kind": "machine_floor_state",
-      "source": "Frantic agent status",
-      "status": "machine_verification_pending",
-      "checks": [
-        "evidence_json_valid:ready",
-        "evidence_items:ready",
-        "artifact_summary:ready",
-        "public_url_admitted:ready",
-        "public_url_live:ready",
-        "report_depth:ready"
-      ]
     }
   ],
   "observations": [
     {
       "name": "claim_ref",
-      "value": "frantic:claim:47eabd48-b728-47a2-aa30-a05a62c2b263"
+      "value": "frantic:claim:ec6b4842-0a74-4fc2-85e0-9276d0d3a119"
     },
     {
       "name": "immediate_checks_waiting_for_delivery",
@@ -109,7 +87,7 @@
     },
     {
       "name": "delayed_check_not_before",
-      "value": "2026-07-04T03:35:05.759Z"
+      "value": "2026-07-04T10:07:17.953Z"
     },
     {
       "name": "blocks_acceptance",
@@ -118,32 +96,20 @@
     {
       "name": "final_receipt_status",
       "value": "pending_real_platform_recheck"
-    },
-    {
-      "name": "delivery_receipt_ref",
-      "value": "frantic:delivery:1215be06-f5fb-4945-8ddc-1ce6d8f50139"
     }
   ],
-  "immediate_pass_record": {
-    "status": "delivery_accepted",
-    "preflight_status": "ok",
-    "delivery_http_status": 200,
-    "delivery_ref": "frantic:delivery:1215be06-f5fb-4945-8ddc-1ce6d8f50139",
-    "machine_checks_current_state": "ready",
-    "note": "Frantic accepted the delivery and queued machine-floor verification. The delayed public_url_live recheck remains governed by the 24 hour not-before schedule."
-  },
   "scheduled_waiting_state": {
     "check": "public_url_live",
     "execution": "async",
     "status": "waiting_for_delivery",
-    "run_after": "2026-07-04T03:35:05.759Z",
+    "run_after": "2026-07-04T10:07:17.953Z",
     "blocks_acceptance": true
   },
   "post_window_recheck_result": {
     "status": "pending",
-    "not_before": "2026-07-04T03:35:05.759Z",
+    "not_before": "2026-07-04T10:07:17.953Z",
     "result": null
   },
-  "delivery_receipt_ref": "frantic:delivery:1215be06-f5fb-4945-8ddc-1ce6d8f50139",
+  "delivery_receipt_ref": null,
   "final_receipt_ref": null
 }
