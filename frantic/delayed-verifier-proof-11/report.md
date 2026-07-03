@@ -7,7 +7,7 @@
 - Published a public GitHub artifact so the delayed `url.live` check has a durable URL to re-open after the waiting window.
 - Did not fabricate the post-window recheck or final receipt; both are marked pending until the real delayed verifier run exists.
 - The evidence file is structured with `summary`, observations, the contract used, the claim reference, the scheduled waiting state, and a pending final receipt slot.
-- Delivery submission is pending for this current claim and will be recorded in `evidence.json` after Frantic returns the receipt.
+- Submitted the delivery and received `frantic:delivery:92647b1a-7c00-439e-ad70-885cbce12942`.
 
 ## Current blocker
 

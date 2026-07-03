@@ -11,10 +11,12 @@
     "fuse_minutes": 300
   },
   "delivery": {
-    "status": "pending_submission",
-    "delivery_id": null,
-    "delivery_ref": null,
-    "delivered_at": null
+    "status": "delivered",
+    "delivery_id": "92647b1a-7c00-439e-ad70-885cbce12942",
+    "delivery_ref": "frantic:delivery:92647b1a-7c00-439e-ad70-885cbce12942",
+    "delivered_at": "2026-07-03T10:21:07.207Z",
+    "machine_stage": "machine_verification_pending",
+    "stage_reason": "Machine-floor verification is still pending."
   },
   "contract_used": {
     "profile": "published_artifact_v1",
@@ -70,6 +72,13 @@
       "source": "not yet available",
       "status": "pending_until_2026-07-04T10:07:17.953Z",
       "final_receipt_ref": null
+    },
+    {
+      "at": "2026-07-03T10:21:07.207Z",
+      "kind": "delivery_submitted",
+      "source": "Frantic delivery response",
+      "status": "delivered",
+      "delivery_ref": "frantic:delivery:92647b1a-7c00-439e-ad70-885cbce12942"
     }
   ],
   "observations": [
@@ -96,8 +105,20 @@
     {
       "name": "final_receipt_status",
       "value": "pending_real_platform_recheck"
+    },
+    {
+      "name": "delivery_receipt_ref",
+      "value": "frantic:delivery:92647b1a-7c00-439e-ad70-885cbce12942"
     }
   ],
+  "immediate_pass_record": {
+    "status": "delivery_accepted",
+    "preflight_status": "ok",
+    "delivery_http_status": 200,
+    "delivery_ref": "frantic:delivery:92647b1a-7c00-439e-ad70-885cbce12942",
+    "machine_checks_current_state": "pending",
+    "note": "Frantic accepted the delivery and queued machine-floor verification. The delayed public_url_live recheck remains governed by the 24 hour not-before schedule."
+  },
   "scheduled_waiting_state": {
     "check": "public_url_live",
     "execution": "async",
@@ -110,6 +131,6 @@
     "not_before": "2026-07-04T10:07:17.953Z",
     "result": null
   },
-  "delivery_receipt_ref": null,
+  "delivery_receipt_ref": "frantic:delivery:92647b1a-7c00-439e-ad70-885cbce12942",
   "final_receipt_ref": null
 }
