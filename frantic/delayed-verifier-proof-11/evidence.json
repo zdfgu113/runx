@@ -10,6 +10,13 @@
     "fuse_expires_at": "2026-07-03T08:35:05.759Z",
     "fuse_minutes": 300
   },
+  "delivery": {
+    "delivery_id": "1215be06-f5fb-4945-8ddc-1ce6d8f50139",
+    "delivery_ref": "frantic:delivery:1215be06-f5fb-4945-8ddc-1ce6d8f50139",
+    "delivered_at": "2026-07-03T04:04:41.843Z",
+    "machine_stage": "machine_verification_pending",
+    "stage_reason": "Machine-floor verification is still pending."
+  },
   "contract_used": {
     "profile": "published_artifact_v1",
     "check_schedules": {
@@ -64,6 +71,27 @@
       "source": "not yet available",
       "status": "pending_until_2026-07-04T03:35:05.759Z",
       "final_receipt_ref": null
+    },
+    {
+      "at": "2026-07-03T04:04:41.843Z",
+      "kind": "delivery_submitted",
+      "source": "Frantic delivery response",
+      "status": "delivered",
+      "delivery_ref": "frantic:delivery:1215be06-f5fb-4945-8ddc-1ce6d8f50139"
+    },
+    {
+      "at": "2026-07-03T04:04:44.878Z",
+      "kind": "machine_floor_state",
+      "source": "Frantic agent status",
+      "status": "machine_verification_pending",
+      "checks": [
+        "evidence_json_valid:ready",
+        "evidence_items:ready",
+        "artifact_summary:ready",
+        "public_url_admitted:ready",
+        "public_url_live:ready",
+        "report_depth:ready"
+      ]
     }
   ],
   "observations": [
@@ -90,11 +118,19 @@
     {
       "name": "final_receipt_status",
       "value": "pending_real_platform_recheck"
+    },
+    {
+      "name": "delivery_receipt_ref",
+      "value": "frantic:delivery:1215be06-f5fb-4945-8ddc-1ce6d8f50139"
     }
   ],
   "immediate_pass_record": {
-    "status": "pending_delivery_preflight",
-    "note": "This field will be updated with the Frantic preflight or delivery response once the public URLs are reachable."
+    "status": "delivery_accepted",
+    "preflight_status": "ok",
+    "delivery_http_status": 200,
+    "delivery_ref": "frantic:delivery:1215be06-f5fb-4945-8ddc-1ce6d8f50139",
+    "machine_checks_current_state": "ready",
+    "note": "Frantic accepted the delivery and queued machine-floor verification. The delayed public_url_live recheck remains governed by the 24 hour not-before schedule."
   },
   "scheduled_waiting_state": {
     "check": "public_url_live",
@@ -108,6 +144,6 @@
     "not_before": "2026-07-04T03:35:05.759Z",
     "result": null
   },
+  "delivery_receipt_ref": "frantic:delivery:1215be06-f5fb-4945-8ddc-1ce6d8f50139",
   "final_receipt_ref": null
 }
-

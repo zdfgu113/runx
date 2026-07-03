@@ -7,6 +7,8 @@
 - Published a public GitHub artifact so the delayed `url.live` check has a durable URL to re-open after the waiting window.
 - Did not fabricate the post-window recheck or final receipt; both are marked pending until the real delayed verifier run exists.
 - The evidence file is structured with `summary`, six observations, the contract used, the claim reference, the scheduled waiting state, and a pending final receipt slot.
+- Submitted the delivery at `2026-07-03T04:04:41.843Z` and received `frantic:delivery:1215be06-f5fb-4945-8ddc-1ce6d8f50139`.
+- Confirmed Frantic agent status after delivery: the claim is `delivered`, stage is `machine_verification_pending`, and the machine-floor checks are queued as `ready`.
 
 ## Current blocker
 
@@ -15,4 +17,3 @@ The platform scheduled the proof check 24 hours after the claim, while the claim
 ## Next update
 
 After `2026-07-04T03:35:05.759Z`, re-fetch the Frantic claim/delivery status and update `evidence.json` with the real post-window recheck result and final receipt ref.
-
