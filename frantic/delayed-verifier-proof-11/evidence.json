@@ -1,7 +1,7 @@
 {
   "claim_type": "frantic_delayed_verifier_proof",
   "bounty": 11,
-  "summary": "This evidence records the live Frantic #11 verifier schedule from the current reclaimed response. It intentionally reports the delayed public_url_live recheck as pending until the platform reaches the 24 hour not-before time.",
+  "summary": "This evidence records the live Frantic #11 verifier schedule and the real post-window platform recheck. The delayed public_url_live check ran after the 24 hour not-before time and returned HTTP 200.",
   "public_url": "https://github.com/zdfgu113/runx/blob/codex/delayed-verifier-proof-11/frantic/delayed-verifier-proof-11/index.md",
   "claim": {
     "claim_id": "5e80d5b0-6a08-4900-987f-f8577fdacf78",
@@ -15,8 +15,8 @@
     "delivery_id": "41dd7892-2d8a-42eb-892e-025af7b3826d",
     "delivery_ref": "frantic:delivery:41dd7892-2d8a-42eb-892e-025af7b3826d",
     "delivered_at": "2026-07-03T16:34:33.023Z",
-    "machine_stage": "machine_verification_pending",
-    "stage_reason": "Machine-floor verification is still pending."
+    "machine_stage": "revision_required_before_this_update",
+    "stage_reason": "Previous auto-review rejected because the post-window recheck result and final receipt ref were still absent; this revision records the real delayed verifier result."
   },
   "contract_used": {
     "profile": "published_artifact_v1",
@@ -74,11 +74,14 @@
       "delivery_ref": "frantic:delivery:41dd7892-2d8a-42eb-892e-025af7b3826d"
     },
     {
-      "at": null,
+      "at": "2026-07-04T16:29:26.652Z",
       "kind": "post_window_recheck",
-      "source": "not yet available",
-      "status": "pending_until_2026-07-04T16:28:52.837Z",
-      "final_receipt_ref": null
+      "source": "Frantic agent status response",
+      "status": "passed",
+      "check": "public_url_live",
+      "summary": "HTTP 200",
+      "verifier_run_ref": "verifier-run:5e80d5b0-6a08-4900-987f-f8577fdacf78:3181",
+      "final_receipt_ref": "verifier-run:5e80d5b0-6a08-4900-987f-f8577fdacf78:3181"
     }
   ],
   "observations": [
@@ -104,11 +107,23 @@
     },
     {
       "name": "final_receipt_status",
-      "value": "pending_real_platform_recheck"
+      "value": "resolved_real_platform_recheck"
     },
     {
       "name": "delivery_receipt_ref",
       "value": "frantic:delivery:41dd7892-2d8a-42eb-892e-025af7b3826d"
+    },
+    {
+      "name": "post_window_recheck_status",
+      "value": "passed"
+    },
+    {
+      "name": "post_window_recheck_at",
+      "value": "2026-07-04T16:29:26.652Z"
+    },
+    {
+      "name": "verifier_run_ref",
+      "value": "verifier-run:5e80d5b0-6a08-4900-987f-f8577fdacf78:3181"
     }
   ],
   "immediate_pass_record": {
@@ -116,21 +131,36 @@
     "preflight_status": "queued",
     "delivery_http_status": 200,
     "delivery_ref": "frantic:delivery:41dd7892-2d8a-42eb-892e-025af7b3826d",
-    "machine_checks_current_state": "pending",
-    "note": "Frantic accepted the delivery and queued machine-floor verification. The delayed public_url_live recheck remains governed by the 24 hour not-before schedule."
+    "machine_checks_current_state": "passed",
+    "note": "Frantic accepted the delivery, queued machine-floor verification, and later completed the delayed public_url_live recheck after the 24 hour not-before schedule."
   },
   "scheduled_waiting_state": {
     "check": "public_url_live",
     "execution": "async",
-    "status": "waiting_for_delivery",
+    "status": "completed_after_wait",
     "run_after": "2026-07-04T16:28:52.837Z",
     "blocks_acceptance": true
   },
   "post_window_recheck_result": {
-    "status": "pending",
+    "status": "passed",
     "not_before": "2026-07-04T16:28:52.837Z",
-    "result": null
+    "observed_at": "2026-07-04T16:29:26.652Z",
+    "verifier_run_ref": "verifier-run:5e80d5b0-6a08-4900-987f-f8577fdacf78:3181",
+    "verifier_run_status": "needs_review",
+    "started_at": "2026-07-04T16:29:26.686Z",
+    "completed_at": "2026-07-04T16:29:27.237Z",
+    "result": {
+      "check_id": "public_url_live",
+      "status": "passed",
+      "summary": "HTTP 200",
+      "evidence": "HTTP 200",
+      "data": {
+        "status": 200,
+        "bytes": 247389,
+        "final_url": "https://github.com/zdfgu113/runx/blob/codex/delayed-verifier-proof-11/frantic/delayed-verifier-proof-11/index.md"
+      }
+    }
   },
   "delivery_receipt_ref": "frantic:delivery:41dd7892-2d8a-42eb-892e-025af7b3826d",
-  "final_receipt_ref": null
+  "final_receipt_ref": "verifier-run:5e80d5b0-6a08-4900-987f-f8577fdacf78:3181"
 }

@@ -1,6 +1,6 @@
 # Delayed verifier proof for Frantic #11
 
-This artifact records the current real verifier state for Frantic bounty #11.
+This artifact records the current real verifier state for Frantic bounty #11, including the completed post-window recheck.
 
 ## Contract used
 
@@ -17,10 +17,12 @@ This artifact records the current real verifier state for Frantic bounty #11.
 ## Current sequence
 
 - The claim response created six verifier checks.
-- Five checks are immediate checks waiting for delivery artifacts.
+- Five checks were immediate artifact checks.
 - The `public_url_live` check is an async delayed check scheduled for `2026-07-04T16:28:52.837Z`.
-- No post-window recheck result exists yet because the platform scheduled it 24 hours after the claim.
-- This artifact will be updated after the delayed checker records the post-window result and final receipt.
+- The post-window `public_url_live` recheck ran at `2026-07-04T16:29:26.652Z`.
+- The delayed checker returned `HTTP 200` and marked `public_url_live` as `passed`.
+- The recorded verifier run reference is `verifier-run:5e80d5b0-6a08-4900-987f-f8577fdacf78:3181`.
+- `evidence.json` contains the immediate-pass record, scheduled waiting state, post-window recheck result, and final receipt ref.
 
 ## Evidence
 
