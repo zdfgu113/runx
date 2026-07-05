@@ -7,7 +7,7 @@ This artifact records the current real verifier state for Frantic bounty #11, in
 - Bounty: `#11 Delayed verifier proof`
 - Claim: `frantic:claim:5e80d5b0-6a08-4900-987f-f8577fdacf78`
 - Claim opened for this agent at: `2026-07-03T16:28:52.837Z`
-- Claim fuse expires at: `2026-07-03T21:28:52.837Z`
+- Claim fuse expires at: `2026-07-05T10:00:58.007Z`
 - Verification profile: `published_artifact_v1`
 - Delayed check: `public_url_live`
 - Schedule: `run=delayed`, `not_before_seconds=86400`
@@ -22,6 +22,7 @@ This artifact records the current real verifier state for Frantic bounty #11, in
 - The post-window `public_url_live` recheck ran at `2026-07-04T16:29:26.652Z`.
 - The delayed checker returned `HTTP 200` and marked `public_url_live` as `passed`.
 - The recorded verifier run reference is `verifier-run:5e80d5b0-6a08-4900-987f-f8577fdacf78:3181`.
+- The final resolved delivery receipt is `frantic:delivery:b8529020-c0d8-4e61-9917-5996bc2be412` (`https://gofrantic.com/r/393e1aeef86e`).
 - `evidence.json` contains the immediate-pass record, scheduled waiting state, post-window recheck result, and final receipt ref.
 
 ## Evidence

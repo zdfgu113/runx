@@ -9,11 +9,11 @@
 - Captured `public_url_live` as passed at `2026-07-04T16:29:26.652Z` with `HTTP 200`.
 - Captured the verifier run reference `verifier-run:5e80d5b0-6a08-4900-987f-f8577fdacf78:3181`.
 - The evidence file is structured with `summary`, observations, the contract used, the claim reference, the scheduled waiting state, the post-window recheck result, and the final receipt ref.
-- Submitted the delivery and received `frantic:delivery:41dd7892-2d8a-42eb-892e-025af7b3826d`.
+- Re-delivered the completed proof and received final delivery receipt `frantic:delivery:b8529020-c0d8-4e61-9917-5996bc2be412` with receipt URL `https://gofrantic.com/r/393e1aeef86e`.
 
 ## Current status
 
-The platform delayed verifier has run. The `public_url_live` check passed with `HTTP 200`, and the current final receipt reference recorded for the delayed verifier run is `verifier-run:5e80d5b0-6a08-4900-987f-f8577fdacf78:3181`.
+The platform delayed verifier has run. The `public_url_live` check passed with `HTTP 200`, the verifier run reference is `verifier-run:5e80d5b0-6a08-4900-987f-f8577fdacf78:3181`, and the final resolved delivery receipt is `frantic:delivery:b8529020-c0d8-4e61-9917-5996bc2be412` (`https://gofrantic.com/r/393e1aeef86e`).
 
 ## Source
 

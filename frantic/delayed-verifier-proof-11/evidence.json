@@ -7,16 +7,18 @@
     "claim_id": "5e80d5b0-6a08-4900-987f-f8577fdacf78",
     "claim_ref": "frantic:claim:5e80d5b0-6a08-4900-987f-f8577fdacf78",
     "claimed_at": "2026-07-03T16:28:52.837Z",
-    "fuse_expires_at": "2026-07-03T21:28:52.837Z",
+    "fuse_expires_at": "2026-07-05T10:00:58.007Z",
     "fuse_minutes": 300
   },
   "delivery": {
     "status": "delivered",
-    "delivery_id": "41dd7892-2d8a-42eb-892e-025af7b3826d",
-    "delivery_ref": "frantic:delivery:41dd7892-2d8a-42eb-892e-025af7b3826d",
-    "delivered_at": "2026-07-03T16:34:33.023Z",
+    "delivery_id": "b8529020-c0d8-4e61-9917-5996bc2be412",
+    "delivery_ref": "frantic:delivery:b8529020-c0d8-4e61-9917-5996bc2be412",
+    "receipt_url": "https://gofrantic.com/r/393e1aeef86e",
+    "delivered_at": "2026-07-05T04:49:13.622Z",
+    "previous_delivery_ref": "frantic:delivery:41dd7892-2d8a-42eb-892e-025af7b3826d",
     "machine_stage": "revision_required_before_this_update",
-    "stage_reason": "Previous auto-review rejected because the post-window recheck result and final receipt ref were still absent; this revision records the real delayed verifier result."
+    "stage_reason": "Previous auto-review rejected because the post-window recheck result and final receipt ref were still absent; this revision records the real delayed verifier result and the latest resolved delivery receipt."
   },
   "contract_used": {
     "profile": "published_artifact_v1",
@@ -81,7 +83,16 @@
       "check": "public_url_live",
       "summary": "HTTP 200",
       "verifier_run_ref": "verifier-run:5e80d5b0-6a08-4900-987f-f8577fdacf78:3181",
-      "final_receipt_ref": "verifier-run:5e80d5b0-6a08-4900-987f-f8577fdacf78:3181"
+      "final_verifier_run_ref": "verifier-run:5e80d5b0-6a08-4900-987f-f8577fdacf78:3181"
+    },
+    {
+      "at": "2026-07-05T04:49:13.622Z",
+      "kind": "final_delivery_receipt_resolved",
+      "source": "Frantic delivery response and agent status response",
+      "status": "delivered",
+      "delivery_ref": "frantic:delivery:b8529020-c0d8-4e61-9917-5996bc2be412",
+      "final_receipt_ref": "frantic:delivery:b8529020-c0d8-4e61-9917-5996bc2be412",
+      "final_receipt_url": "https://gofrantic.com/r/393e1aeef86e"
     }
   ],
   "observations": [
@@ -111,7 +122,7 @@
     },
     {
       "name": "delivery_receipt_ref",
-      "value": "frantic:delivery:41dd7892-2d8a-42eb-892e-025af7b3826d"
+      "value": "frantic:delivery:b8529020-c0d8-4e61-9917-5996bc2be412"
     },
     {
       "name": "post_window_recheck_status",
@@ -124,13 +135,21 @@
     {
       "name": "verifier_run_ref",
       "value": "verifier-run:5e80d5b0-6a08-4900-987f-f8577fdacf78:3181"
+    },
+    {
+      "name": "final_receipt_ref",
+      "value": "frantic:delivery:b8529020-c0d8-4e61-9917-5996bc2be412"
+    },
+    {
+      "name": "final_receipt_url",
+      "value": "https://gofrantic.com/r/393e1aeef86e"
     }
   ],
   "immediate_pass_record": {
     "status": "delivery_accepted",
     "preflight_status": "queued",
     "delivery_http_status": 200,
-    "delivery_ref": "frantic:delivery:41dd7892-2d8a-42eb-892e-025af7b3826d",
+    "delivery_ref": "frantic:delivery:b8529020-c0d8-4e61-9917-5996bc2be412",
     "machine_checks_current_state": "passed",
     "note": "Frantic accepted the delivery, queued machine-floor verification, and later completed the delayed public_url_live recheck after the 24 hour not-before schedule."
   },
@@ -161,6 +180,8 @@
       }
     }
   },
-  "delivery_receipt_ref": "frantic:delivery:41dd7892-2d8a-42eb-892e-025af7b3826d",
-  "final_receipt_ref": "verifier-run:5e80d5b0-6a08-4900-987f-f8577fdacf78:3181"
+  "delivery_receipt_ref": "frantic:delivery:b8529020-c0d8-4e61-9917-5996bc2be412",
+  "final_verifier_run_ref": "verifier-run:5e80d5b0-6a08-4900-987f-f8577fdacf78:3181",
+  "final_receipt_ref": "frantic:delivery:b8529020-c0d8-4e61-9917-5996bc2be412",
+  "final_receipt_url": "https://gofrantic.com/r/393e1aeef86e"
 }
